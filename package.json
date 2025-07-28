@@ -4,5 +4,20 @@
   "main": "index.js",
   "engines": {
     "node": "20"
-  }
+  },
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierLMSidn/GithubActionsWithGCP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavierLMSidn/GithubActionsWithGCP/issues"
+  },
+  "homepage": "https://github.com/JavierLMSidn/GithubActionsWithGCP#readme"
 }
