@@ -1,21 +1,21 @@
-# ☁️ Google Cloud Function + GitHub Actions 🚀
+#  Google Cloud Function + GitHub Actions 
 
 Este proyecto demuestra cómo desplegar una función HTTP en **Google Cloud Functions Gen 2** utilizando **GitHub Actions** como pipeline de CI/CD automatizado.
 
 ---
 
-## 📦 ¿Qué hace este ejemplo?
+##  ¿Qué hace este ejemplo?
 
 - Expone una función HTTP que responde con:
   ```
-  Hola desde una función en Google Cloud 🚀
+  Hola desde una función en Google Cloud 
   ```
 
 - El despliegue se hace automáticamente cada vez que haces un `push` a la rama `main`.
 
 ---
 
-## 🧱 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 .
@@ -29,12 +29,12 @@ Este proyecto demuestra cómo desplegar una función HTTP en **Google Cloud Func
 
 ---
 
-## 🚀 ¿Cómo lo configuro?
+##  ¿Cómo lo configuro?
 
 ### 1. Prepara el entorno en Google Cloud
 
-#### ✅ Crea un proyecto GCP (si no tienes uno)
-#### ✅ Habilita las APIs necesarias:
+####  Crea un proyecto GCP (si no tienes uno)
+####  Habilita las APIs necesarias:
 ```bash
 gcloud services enable cloudfunctions.googleapis.com
 gcloud services enable run.googleapis.com
@@ -42,7 +42,7 @@ gcloud services enable iam.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
 ```
 
-#### ✅ Crea una Service Account para GitHub Actions:
+####  Crea una Service Account para GitHub Actions:
 
 Asigna estos roles a la cuenta:
 
@@ -54,13 +54,13 @@ Asigna estos roles a la cuenta:
 
 Y luego otórgale `actAs` sobre la cuenta `compute@developer.gserviceaccount.com`.
 
-#### ✅ Descarga la clave JSON de la service account.
+####  Descarga la clave JSON de la service account.
 
 ---
 
 ### 2. Configura el secreto en GitHub
 
-#### 🔐 Codifica el JSON a base64
+####  Codifica el JSON a base64
 
 En PowerShell:
 
@@ -74,7 +74,7 @@ En macOS/Linux:
 base64 tu-clave.json
 ```
 
-#### 🔐 Crea un secreto en tu repositorio:
+####  Crea un secreto en tu repositorio:
 - Nombre: `GCP_SA_KEY`
 - Valor: el base64 completo del JSON
 
@@ -103,14 +103,14 @@ git commit -m "Primer despliegue"
 git push origin main
 ```
 
-GitHub Actions se encargará de todo ✨
+GitHub Actions se encargará de todo
 
 ---
 
-## 🧪 Cómo probar la función
+##  Cómo probar la función
 
 1. Ve a [Google Cloud Console > Cloud Functions](https://console.cloud.google.com/functions)
-2. Copia la **URL pública**
+2. Copia la URL pública
 3. Pega en el navegador o usa `curl`:
 
 ```bash
@@ -119,7 +119,7 @@ curl https://REGION-PROYECTO.cloudfunctions.net/helloWorld
 
 ---
 
-## 🔄 Cómo actualizar la función
+##  Cómo actualizar la función
 
 1. Modifica `index.js` (por ejemplo, cambia el texto de respuesta)
 2. Haz commit y push
@@ -127,14 +127,14 @@ curl https://REGION-PROYECTO.cloudfunctions.net/helloWorld
 
 ---
 
-## 📚 Recursos
+##  Recursos
 
 - [Documentación oficial Cloud Functions](https://cloud.google.com/functions/docs)
 - [GitHub Actions para GCP](https://github.com/google-github-actions/setup-gcloud)
 
 ---
 
-## 🧠 Créditos
+##  Créditos
 
 Creado por [Javi](https://github.com/tuusuario)  
-Consultor Salesforce & Marketing Cloud 🚀
+Consultor Salesforce & Marketing Cloud
